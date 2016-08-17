@@ -1,6 +1,7 @@
 package httpTest;
 
 import net.sf.json.JSON;
+import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import net.sf.json.xml.XMLSerializer;
 
@@ -8,18 +9,18 @@ public class jsonDemo {
 	
 	public  static void main(String[] args) {		
 		
-		   System.out.println("xml×Ö·û´®×ªjson×Ö·û´®");
-		   String xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><users><password>123456</password><username>ÕÅÈý</username></users>";
+		   System.out.println("xmlï¿½Ö·ï¿½ï¿½ï¿½×ªjsonï¿½Ö·ï¿½ï¿½ï¿½");
+		   String xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><users><password>123456</password><username>ï¿½ï¿½ï¿½ï¿½</username></users>";
 		   XMLSerializer xmlSerializer = new XMLSerializer();
 		   JSON  json = xmlSerializer.read(xml);
-		   System.out.println("Í¨¹ýXML×ª»»ÎªJSON´®£º"+json.toString());		
-		   //ÕâÊÇÒ»¸öÔ´½Ó¿ÚµÄJSON´®
+		   System.out.println("Í¨ï¿½ï¿½XML×ªï¿½ï¿½ÎªJSONï¿½ï¿½ï¿½ï¿½"+json.toString());		
+		   //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ô´ï¿½Ó¿Úµï¿½JSONï¿½ï¿½
 		   String jsonStr = json.toString();
-		   //Ô´½Ó¿Ú×ª»»³Éjsonboject¶ÔÏó
+		   //Ô´ï¿½Ó¿ï¿½×ªï¿½ï¿½ï¿½ï¿½jsonbojectï¿½ï¿½ï¿½ï¿½
 		   JSONObject jsonObj = JSONObject.fromObject(jsonStr);		   
 		   System.out.println(jsonObj.getString("username"));
 		   System.out.println(jsonObj.getString("password"));
-		  
+
 	}
 
 }

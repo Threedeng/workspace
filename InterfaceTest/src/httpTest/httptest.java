@@ -189,6 +189,8 @@ public class httptest {
 //		post();
 //		httpsClientDefault();
 //		postjson();
+//		jsonDemo.main(args);
+		
 		
 		HttpforTest hTest = new HttpforTest();
 //		hTest.setUrl("www.baidu.com").get();

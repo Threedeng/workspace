@@ -18,6 +18,8 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
+import com.google.gson.Gson;
+
 import net.sf.json.JSONObject;
 import net.sf.json.util.JSONUtils;
 
@@ -80,6 +82,7 @@ public class HttpforTest {
     	String jsonStr = EntityUtils.toString(response.getEntity());	
     	System.out.println(jsonStr);
     	releaseJson(jsonStr);
+
     	
     	InetAddress[] address = InetAddress.getAllByName("mservice.millionairematch.com");
 		  	for (int i = 0; i < address.length; i++) {
@@ -95,6 +98,12 @@ public class HttpforTest {
 		
 	}
 	
+	private void gjsondemo(String jString) {
+		Gson gson;
+		
+		
+	}
+
 	private void releaseJson(String jsString) {
 		JSONObject jsonObj = JSONObject.fromObject(jsString);  
         Iterator it = jsonObj.keys();  
